@@ -16,13 +16,17 @@
     <meta name="description" content="Just a Dancing Penguin">
 
     <meta name="author" content="Anthony-Andrews">
-    <!https: //github.com/Anthony-Andrews>
-    <script src="fart.js"></script>
+    <!-- https: //github.com/Anthony-Andrews -->
   </head>
 
-
-
   <body>
+
+    <script>
+      function play(){
+        var audio = document.getElementById("fart");
+        audio.play();
+        }
+    </script>
 
     <style>
       img {
@@ -43,11 +47,11 @@
         transform: translate(-50%, -50%);
         background-color: transparent;
         color: #000;
-	width: 150px;
- 	height: auto;
-	unselectable="on"
- 	onselectstart="return false;" 
- 	onmousedown="return false;">
+	      width: 150px;
+ 	      height: auto;
+	      unselectable="on"
+ 	      onselectstart="return false;" 
+ 	      onmousedown="return false;">
       }
 
       img::selection {
@@ -66,12 +70,14 @@
     </style>
 
     <div class=img oncontextmenu="return false;">
-      <img id="img" src="penguindancing.gif" class="center" onclick="playAudio('fart.mp3')">
+      <img id="img" src="penguindancing.gif" class="center" value="PLAY" onclick="play()">
     </div class=img>
 
     <div class="about">
       <a href="https://github.com/penguindancing" target="_blank">About</a>
     </div>
+
+    <audio id="fart" src="fart.ogg" ></audio>
 
   </body>
 
